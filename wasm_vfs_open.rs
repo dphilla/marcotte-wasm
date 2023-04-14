@@ -1,7 +1,5 @@
+// function body for --full open syscall
 
-#[cfg_attr(target_arch = "wasm32", export_name = "open")]
-#[no_mangle]
-pub fn open(path: *const c_char, _: c_int, _: c_int) -> c_int {
     let inode;
     let cstr = unsafe { CString::from_raw(path as *mut c_char) };
     let path_buf = PathBuf::from(cstr.to_str().expect("Failed to convert CString to str"));
@@ -18,4 +16,4 @@ pub fn open(path: *const c_char, _: c_int, _: c_int) -> c_int {
         fd = process.open(unsafe { &mut *FILESYSTEM.as_ref().unwrap().get() }, inode).expect("Failed to open the file");
     }
     return fd as c_int;
-}
+

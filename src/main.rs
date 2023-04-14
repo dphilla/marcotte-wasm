@@ -34,9 +34,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let full = true;
 
-    // START: with open
+    // START HERE: with open
     // 1. system_layer.rs gets generated, and that is what uses wasi-vfs under the hood (from a
     // crate)
+    // 2. make exportable, to work in a scale func
     // 2. specifically open, read, write, close, to start
     // 3. crates for wasm_vfs, marcotte_wasm
 
