@@ -11,7 +11,7 @@ static mut FILESYSTEM: Option<UnsafeCell<FileSystem>> = None;
 static mut PROCESS: Option<UnsafeCell<Process>> = None;
 static INIT: Once = Once::new();
 
-fn initialize_globals() {
+pub fn initialize_globals() {
     INIT.call_once(|| {
         unsafe {
             FILESYSTEM = Some(UnsafeCell::new(FileSystem::new()));
