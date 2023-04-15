@@ -8,6 +8,7 @@ use handlebars::Handlebars;
 use std::env;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    //TODO: add other libc templates to generate one system_layer.rs
     let template = fs::read_to_string("libc_open.rs")?;
     let mut handlebars = Handlebars::new();
     handlebars.register_template_string("open_template", template)?;
@@ -27,14 +28,17 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     let mut call_list = "open, write, read, close".to_string();
-
     if full {
         println!("\nCreating wasm-libc implementations, and relevant system call layer for: {}.\n", call_list);
+    } else {
+        println!("\nCreating wasm-libc implementation with default stubbed values for: {}\n", call_list);
+    }
+
+    if full {
         initialize_component_globals = fs::read_to_string("init_imports.rs")?;
         body = fs::read_to_string("wasm_vfs_open.rs")?;
         body1 = fs::read_to_string("file_vfs.rs")?;
     } else {
-        println!("\nCreating wasm-libc implementation with default stubbed values for: {}\n", call_list);
         initialize_component_globals = "// no system call layer generated".to_string();
         body = "0".to_string();
         body1 = "0".to_string();
