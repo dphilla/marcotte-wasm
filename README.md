@@ -1,6 +1,6 @@
 # marcotte-wasm
 
-Create Layers of host-agnostic system functionality for your Wasm application.
+Create Layers of host-agnostic system functionality for your WebAssembly (Wasm) application.
 
 ## Example Usage
 
