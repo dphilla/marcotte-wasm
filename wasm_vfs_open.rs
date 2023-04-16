@@ -16,4 +16,3 @@
         fd = process.open(unsafe { &mut *FILESYSTEM.as_ref().unwrap().get() }, inode).expect("Failed to open the file");
     }
     return fd as c_int;
-
