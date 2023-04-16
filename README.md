@@ -37,7 +37,7 @@ Running `mwasm open read write close --full` Will generate everything this code 
 
 ## How it works
 
-This cli relies on wasm-libc and wasm-vfs to create the libc interface layer, and the "Syscall" functionality all within a consumable Wasm Component. 
+This cli relies on [wasm-libc](https://github.com/dphilla/wasm-vfs) and [wasm-vfs](https://github.com/dphilla/wasm-libc) to create the libc interface layer, and the "Syscall" functionality all within a consumable Wasm Component. 
 
 ## Installation 
 
