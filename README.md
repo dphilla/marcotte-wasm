@@ -41,11 +41,11 @@ This cli relies on [wasm-libc](https://github.com/dphilla/wasm-vfs) and [wasm-vf
 
 ## Installation 
 
-clone and `cargo build --release` and drop the generated binary in your /usr/bin directory. 
+clone and `cargo build --release` and drop the generated binary in your /usr/bin (or, your prefered) directory. 
 
 ## Limitations 
 
-Many, as **this is an experimental tool**, but notably:
+Many, as **this is a work-in-progress, experimental tool**, but notably:
 
 - Networking Layers 
 - Size Limitations
