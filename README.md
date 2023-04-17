@@ -31,7 +31,7 @@ pub fn scale(ctx: &mut Context) -> Result<&mut Context, Box<dyn std::error::Erro
     // close()
 }
 ```
-This will not be able to run in Core Wasm, because it relies on underlying libc interfaces, and syscalls provided by a kernel. `marcotte` can create these layers in pure webassembly, and allow your program to run (mostly) as if it were compiled to a native platform
+This will not be able to run in Core Wasm, because it relies on underlying libc interfaces, and syscalls provided by a kernel. `marcotte` (aliased: `mwasm`) can create these layers in pure webassembly, and allow your program to run (mostly) as if it were compiled to a native platform.
 
 Running `mwasm open read write close --full` Will generate everything this code needs to run, in a pure WebAssembly Environment. 
 
