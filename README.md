@@ -2,6 +2,8 @@
 
 Create Layers of host-agnostic system functionality for your WebAssembly (Wasm) application.
 
+(Currently supporting Virtual Filesystem Layers)
+
 ## Example Usage
 
 Take this rust code:
