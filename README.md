@@ -2,7 +2,7 @@
 
 Create Layers of host-agnostic system functionality for your WebAssembly (Wasm) application.
 
-(Currently supporting Filesystem Layers)
+(Currently supports Filesystem Layers)
 
 ## Example Usage
 
