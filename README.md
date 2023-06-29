@@ -43,7 +43,7 @@ This cli relies on [wasm-vfs](https://github.com/dphilla/wasm-vfs) and [wasm-lib
 
 ## Installation 
 
-clone and `cargo build --release` and drop the generated binary in your /usr/bin (or, your prefered) directory. 
+clone and `cargo build --release` and drop the generated binary in your /usr/bin (or, your preferred) directory. 
 
 ## Limitations 
 
